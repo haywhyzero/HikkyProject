@@ -1,6 +1,14 @@
+import 'dart:io';
+
 void main() {
+
+    print("Enter you age: ");
+    var age = int.parse(stdin.readLineSync()!);
+
+
+
     String? name = "Adejumoke";
-    int? age = 23;
+    // int? age = 23;
     String? nationality = "nigerian";
     String? religion = "islam";
     String? stateOfOrigin = "oyo state";
@@ -31,6 +39,7 @@ void main() {
       print("You are not allowed in this club");
     } else {
       print("Welcome, $name");
+      print(paragraph);
     }
                         
 }
