@@ -1,14 +1,47 @@
+import 'dart:io';
 void main() {
-    String? name = "Adejumoke";
-    int? age = 23;
-    String? nationality = "nigerian";
-    String? religion = "islam";
-    String? stateOfOrigin = "oyo state";
-    String? address = "oke ero kwara";
-    String? occupation = "government pikin";
-    String? favFood = "eggs";
-    String? favColor = "custard blue";
-    String? hobby = "watching tvd";
+    dynamic name;
+    dynamic age;
+    dynamic nationality;
+    dynamic religion;
+    dynamic stateOfOrigin;
+    dynamic address;
+    dynamic occupation;
+    dynamic favFood;
+    dynamic favColor;
+    dynamic hobby;
+
+    print("Enter your name:");
+    name = stdin.readLineSync()!;
+
+    print("Enter your age:");
+    age = int.parse(stdin.readLineSync()!);
+
+    print("Enter your nationality:");
+    nationality = stdin.readLineSync()!;
+
+    print("Enter your religion:");
+    religion = stdin.readLineSync()!;
+
+    print("Enter your state of origin:");
+    stateOfOrigin = stdin.readLineSync()!;
+
+    print("Enter your address:");
+    address = stdin.readLineSync()!;
+
+    print("Enter your occupation:");
+    occupation = stdin.readLineSync()!;
+
+    print("Enter your favourite food:");
+    favFood = stdin.readLineSync()!;
+
+    print("Enter your favourite color:");
+    favColor = stdin.readLineSync()!;
+
+    print("Enter your hobby:");
+    hobby = stdin.readLineSync()!;
+
+
 
 
     int year = DateTime.now().year;
@@ -17,7 +50,7 @@ void main() {
     String todaysDate = "${day}st/$month/$year";
 
 
-    String? paragraph;
+    String paragraph;
     paragraph = """Hello, my name is $name. I am $age years old. I am a $nationality and I practice $religion.
      I am from $stateOfOrigin but I live in $address. I am a $occupation. 
      My fav food is $favFood and my fav color is $favColor. I love $hobby when I am free""";
@@ -32,5 +65,6 @@ void main() {
     } else {
       print("Welcome, $name");
     }
+    print(paragraph);
                         
 }
