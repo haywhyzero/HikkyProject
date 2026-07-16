@@ -31,11 +31,20 @@ void main () {
   int userWins = 0;
   int computerWins  = 0;
 
+  List<String> choices = ['rock', 'paper', 'scissors'];
+
   final username = input("Enter your name: ");
   
   while (userWins < 10 || computerWins < 10) {
-    final userChoice = input("Enter your choice (rock, paper, scissors): ");
-    final computerChoice = ['rock', 'paper', 'scissors'][Random().nextInt(3)];
+    final user = input("Enter your choice (rock, paper, scissors): ");
+    final userChoice = user.toLowerCase();
+    if (!choices.contains(userChoice)) {
+      print("Invalid choice. Please try again.");
+      continue;
+    }
+
+    
+    final computerChoice = choices[Random().nextInt(choices.length)];
 
     print("Computer chose: $computerChoice");
 
@@ -52,6 +61,9 @@ void main () {
     }
     
     print("\n");
+    if (userWins == 10 || computerWins == 10) {
+      break;
+    }
 
   }
 
