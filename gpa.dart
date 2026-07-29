@@ -38,38 +38,38 @@ import 'input.dart';
     return gradePoint * courseUnit;
   }
   void main() {
-    //String courseCode;
-    int courseUnit;
-    int score;
-    int creditPoint;  
-    int totalCreditPoint = 0;
-    int totalCourseUnit = 0;
-    List<String> coursCode = [];
-    List<String> gradeLetter = [];
-  int numOfCourses = int.parse(input("Enter number of courses: "));
-  for (int i = 0; i < numOfCourses; i++) {
-  final courseCode = input("Enter course code: ");
-  courseUnit = int.parse(input("Enter course unit: "));
-  score = int.parse(input("Enter your score: "));
+   //String courseCode;
+   int courseUnit;
+   int score;
+   int creditPoint;  
+   int totalCreditPoint = 0;
+   int totalCourseUnit = 0;
+   List <String> coursCode = [];
+   List <String> gradeLetter = [];
 
-  final gradeL = gradeLetters(score);
-  final gradeP = gradePoint(gradeL);
+int numOfCourses = int.parse(input("Enter number of courses: "));
+for (int i = 0; i < numOfCourses; i++) {
+final courseCode = input("Enter course code: ");
+courseUnit = int.parse(input("Enter course unit: "));
+score = int.parse(input("Enter your score: "));
 
-  coursCode.add(courseCode);
-  gradeLetter.add(gradeL);
-  
-  creditPoint = calculateCreditPoint(gradeP, courseUnit);
-  totalCourseUnit += courseUnit;
-  totalCreditPoint += creditPoint;
-
-  print("\n");
-  }
-
-  double gpa = totalCreditPoint / totalCourseUnit;
-  for (int i = 0; i < coursCode.length; i++) {
-    print ("${coursCode[i]}  ${gradeLetter[i]}");
-  }
+ final gradeL = gradeLetters (score);
+ final gradeP = gradePoint (gradeL);
  
-  print("gpa: $gpa");
+ coursCode.add(courseCode);
+ gradeLetter.add(gradeL);
+
+creditPoint = calculateCreditPoint(gradeP, courseUnit);
+totalCourseUnit += courseUnit;
+totalCreditPoint += creditPoint;
+print("\n");
+}
+
+double gpa = totalCreditPoint / totalCourseUnit;
+for (int i = 0; i < coursCode.length; i++) {
+  print ("${coursCode[i]} - ${gradeLetter[i]}");
+}
+
+print("GPA: $gpa");
 
   }
