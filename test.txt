@@ -1,12 +1,7 @@
 
 
-
-JSON
-
-{
-    "name" : "hikky",
-    
-}
-
-
-
+negation ! 
+conjunction &&
+disjunction ||
+implication !||
+equivalence ==
