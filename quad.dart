@@ -1,4 +1,3 @@
-
 import 'dart:math';
 import 'input.dart';
 List<double> quadraticEquation (int a, int b, int c) {

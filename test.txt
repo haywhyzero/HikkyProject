@@ -1,0 +1,7 @@
+
+
+negation ! 
+conjunction &&
+disjunction ||
+implication !||
+equivalence ==
