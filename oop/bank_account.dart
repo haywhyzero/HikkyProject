@@ -1,3 +1,5 @@
+import '../classes/class3.dart';
+
 class BankAccount {
   double _balance = 0.0;
 
@@ -9,7 +11,7 @@ class BankAccount {
     if (amount <= _balance) {
       _balance -= amount;
     } else {
-      print("Insufficient funds");
+      throw InsufficientFundsException("Insufficent Funds to withdraw!");
     }
   }
 
@@ -19,11 +21,16 @@ class BankAccount {
 }
 
 void main() {
+  try {
   BankAccount account = BankAccount();
   account.deposit(1000.0);
 
-  account.withdraw(500.0);
+  account.withdraw(1500.0);
 
   print("Current balance: \$${account.representative_balance}");
+  } on InsufficientFundsException catch (e) {
+    print("Error Occured! " + e.message);
+  } 
+ 
  
 }
